@@ -1,10 +1,8 @@
 package org.example;
 
-public class Dice
-{
-    public int roll()
-    {
-        return (int)(Math.random()*6)+1;
+public class Dice {
+    public int roll() {
+        return (int) Math.floor((Math.random() * 6) + 1);
     }
 
 }

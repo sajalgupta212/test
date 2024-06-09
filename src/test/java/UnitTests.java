@@ -1,22 +1,24 @@
 import org.example.Dice;
-import org.example.arena;
-import org.example.player;
+import org.example.Arena;
+import org.example.Player;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class unitTests {
+public class UnitTests {
+    Player playerx;
+
     @Test
     public void playerInitials() {
-        player playerx = new player(100, 50, 30);
+        playerx = new Player(100, 50, 30, "A");
         Assert.assertEquals(100, playerx.getHealth());
         Assert.assertEquals(50, playerx.getStrength());
         Assert.assertEquals(30, playerx.getAttacks());
+        Assert.assertEquals("A", playerx.getName());
     }
 
     @Test
     public void reducedHealthCheck() {
-        player playerx = new player(100, 50, 30);
-
+        playerx = new Player(100, 50, 30, "A");
         playerx.reducedHealthCalc(40);
         Assert.assertEquals(60, playerx.getHealth());
 
@@ -27,7 +29,7 @@ public class unitTests {
 
     @Test
     public void isAliveTest() {
-        player playerx = new player(100, 50, 30);
+        playerx = new Player(100, 50, 30, "A");
 
         Assert.assertTrue(playerx.playerAlive());
 
@@ -37,14 +39,14 @@ public class unitTests {
 
     @Test
     public void testArenaFight() {
-        player playerA = new player(50, 5, 10);
-        player playerB = new player(100, 10, 5);
-        arena arena1 = new arena(playerA, playerB);
+        Player playerA = new Player(50, 5, 10, "A");
+        Player playerB = new Player(100, 10, 5, "B");
+        Arena arena1 = new Arena(playerA, playerB);
         arena1.fight();
         Assert.assertTrue(!playerA.playerAlive() || !playerB.playerAlive());
     }
 
-   @Test
+    @Test
     public void testDiceRoll() {
         Dice dice = new Dice();
         for (int i = 0; i < 100; i++) {
