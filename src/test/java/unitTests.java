@@ -1,3 +1,6 @@
+import org.example.Dice;
+import org.example.arena;
+import org.example.player;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

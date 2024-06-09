@@ -1,10 +1,12 @@
+package org.example;
+
 public class arena
 {
     private player playerA;
     private player playerB;
     private Dice dice;
 
-    public arena(player player1,player player2)
+    public arena(player player1, player player2)
     {
         playerA=player1;
         playerB=player2;

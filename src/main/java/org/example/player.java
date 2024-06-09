@@ -1,3 +1,5 @@
+package org.example;
+
 public class player {
     private int health;
     private int strength;
