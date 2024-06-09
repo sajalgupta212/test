@@ -10,7 +10,7 @@ public class Main {
         String player1Name = sc.nextLine();
         System.out.println("enter Player2 name");
         String player2Name = sc.nextLine();
-        System.out.println("Do you want to enter player(s) attributes? (aY/N)");
+        System.out.println("Do you want to enter player(s) attributes? (Y/N)");
         String choice = sc.nextLine();
 
         Player playerA = new Player(50, 5, 10, player1Name);
